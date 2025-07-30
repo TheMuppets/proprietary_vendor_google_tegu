@@ -565,6 +565,7 @@ PRODUCT_PACKAGES += \
     HotwordEnrollmentOKGoogleFUSIONPro \
     HotwordEnrollmentXGoogleFUSIONPro \
     OemDmTrigger \
+    PixelCameraServicesConnectivityClient \
     TetheringEntitlement \
     WfcActivation \
     OemRilHookService \
