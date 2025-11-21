@@ -57,7 +57,7 @@ subband5gver=0x4
 
 # RX gain related
 rxgains2gelnagaina0=0
-rxgains2gtrisoa0=0
+rxgains2gtrisoa0=30
 rxgains2gtrelnabypa0=1
 rxgains5gelnagaina0=0
 rxgains5gtrisoa0=0
@@ -80,7 +80,7 @@ felossRx5ga0=0,0,0,0
 felossTx6ga0=0,0,0,0,0,0
 felossRx6ga0=0,0,0,0,0,0
 rxgains2gelnagaina1=0
-rxgains2gtrisoa1=0
+rxgains2gtrisoa1=30
 rxgains2gtrelnabypa1=1
 rxgains5gelnagaina1=0
 rxgains5gtrisoa1=0
@@ -409,7 +409,7 @@ swctrlmapext_5g=0x00000000,0x00000000,0x00000000,0x00000000,0x000
 swctrlmap_6g=0x00000000,0x00000000,0x00000000,0x00000000,0x3ff
 swctrlmapext_6g=0x00000000,0x00000000,0x00000000,0x00000000,0x000
 
-swctrlmap_2g=0x00000101,0x00000101,0x00000101,0x00000000,0x3ff
+swctrlmap_2g=0x00000101,0x00000101,0x00000000,0x00000000,0x3ff
 swctrlmapext_2g=0x00000000,0x00000000,0x00000000,0x00000000,0x000
 
 #placeholder clb params to get around TCL init errors about missing clb mask when mask init proc is called.. this will need review later

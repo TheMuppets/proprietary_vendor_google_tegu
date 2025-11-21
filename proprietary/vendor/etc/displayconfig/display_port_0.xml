@@ -122,11 +122,6 @@
             <type>adaptive</type>
             <map>
                 <point>
-                    <first>15</first>
-                    <!-- 65 nits (65-2)/(1200-2)*(0.67-0.0)+0.0 = 0.035233723  -->
-                    <second>0.035233723</second>
-                </point>
-                <point>
                     <first>1000</first>
                     <!-- 600 nits (600-2)/(1200-2)*(0.67-0.0)+0.0 = 0.334440735  -->
                     <second>0.334440735</second>

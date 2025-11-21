@@ -95,7 +95,9 @@
   fac_cal_transform=1.0 -0.23853
   temp=30.83079
   temp_sensitivity=0.00138
+  name=SPL07003 Barometer
 +/dev/spl07003/0/temp
+  name=SPL07003 Temperature
 
 # ALSP (TMD3733)
 +/dev/tmd3733/0
@@ -105,8 +107,32 @@
   intr_id=45
   anti_aliasing=1
   use_c_histogram=1
+  # Leakage model type to use to calculate display leakage.
+  #  0 : Compensate Lux using weighted Luma.
+  #  1 : Compensate Lux using legacy plus modified C-channel histogram.
+  #  2 : Compensate calculated XYZ values.
+  #  3 : Compensate CRGBW channels.
+  leakage_model_type=1
 
 +/dev/tmd3733/0/als
+  # c_lux_eq#_@ = <i:first_c_cnt> <i:last_c_cnt> <f:{coeffs}>
+  c_lux_coeff_eq0_0=0 2 1
+  c_lux_coeff_eq0_1=2 5 1.3333 -0.1667
+  c_lux_coeff_eq0_2=5 -1 0.5
+
+  c_lux_coeff_eq1_0=0 40 1 -0.0075 -0.000125
+  c_lux_coeff_eq1_1=40 -1 0.5
+
+  # lux_eq_range# = f:<r_c_start> f:<r_c_end> i:<mode> [<eq0>> [<eq1>]]
+  # mode: 0: default-lux, 1: c-based eq0, 2: w-avg from d->eq0, 3: w-avg from eq0->d, 4: w-avg w/ eq0+eq1
+  lux_eq_range0=0 0.3 1 0
+  lux_eq_range1=0.3 0.5 3 0
+  lux_eq_range2=0.5 0.8 0
+  lux_eq_range3=0.8 0.9 2 0
+  lux_eq_range4=0.9 1.0 1 0
+  lux_eq_range5=1.0 1.1 4 0 1
+  lux_eq_range6=1.1 -1 1 1
+
   # Number of EM cycles in a 60Hz frame.
   EM_cycle_count_60Hz=4
 
@@ -268,3 +294,8 @@
   # event. The initial angle to compare against is taken on a To-Ear event.
   # Default: 30
   from_ear_delta_thresh_angle=30
+
++/vsc/aad_prox
+  # 0: Normal (fusion of Optical Prox with ultrasound presence detector)
+  # 1: Optical Prox Passthrough (skips all other fusion logic)
+  mode=1
