@@ -20,6 +20,12 @@
       <argument name="Name" value="BCL_AUDIO_BAACL" />
       <argument name="Strategy" value="MediaSpeakerAndScreenOn" />
     </feature>
+    <feature name="BatteryMitigation">
+      <argument name="TargetDigitalVolume" value="109" />
+      <argument name="PcmRampMs" value="37" />
+      <argument name="ThrottleDurationMs" value="3000" />
+      <argument name="ThrottleMitigationLevel" value="LIGHT" />
+    </feature>
     <feature name="PlaybackThermalThrottle">
       <argument name="PollWaitMs" value="20000" />
       <argument name="ThermistorName" value="VIRTUAL-SKIN-SPEAKER" />
@@ -64,7 +70,7 @@
       <argument name="ThermistorsName" value="VIRTUAL-SKIN-SPEAKER" />
       <argument name="Extensions" value="StereoSpatializerIndicator" />
     </tuner>
-    <tuner type="telephony" name="fmapmg3hybrid">
+    <tuner type="telephony" name="fortemedia">
       <argument name="VoIP_DLCHs" value="SPK:2,USB:2,BT:2" />
       <argument name="VoIP_Rate" value="32000" />
       <argument name="BOOST_USB_SWB_CLK" value="y" />
